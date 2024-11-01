@@ -1,6 +1,11 @@
 name: Azure Pipelines
 variables:
   python.version: '3.7.6'
+trigger:
+- main  # Change this to your desired trigger branch
+
+pool:
+  vmImage: 'ubuntu-latest'
 stages:
 - stage: Build
   jobs:
